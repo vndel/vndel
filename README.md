@@ -93,6 +93,22 @@ nothing that must survive a restart goes over it.
 | [luckperms-matrix-preset](https://github.com/vndel/luckperms-matrix-preset) | Donor and staff as orthogonal tracks, banded weights, per-server contextual nodes. |
 | [prison-rankup-eco-preset](https://github.com/vndel/prison-rankup-eco-preset) | Cost curve matched to the income curve so time-per-rank stays constant A→Z. No compounding multipliers. |
 | [skyblock-island-schematics-pack](https://github.com/vndel/skyblock-island-schematics-pack) | Grid spacing, deny-by-default WorldGuard policy, async sliced island generation. |
+| [mc-portfolio-provisioner](https://github.com/vndel/mc-portfolio-provisioner) | The provisioning script behind these repositories. Public-only by construction, aborts rather than touch a private repo, token never written to `.git/config`. |
+
+#### Verifying any of it
+
+No CI badges here, and that is intentional: GitHub-hosted runners are
+unavailable on this account — a workflow whose only job was `echo hello` still
+failed to start. A permanently red ✗ would imply broken code, so each project
+carries a `verify.sh` that builds, tests, and asserts instead.
+
+```bash
+git clone https://github.com/vndel/hyper-economy-bridge && cd hyper-economy-bridge
+./verify.sh      # mvn verify, then assert the jar is Java 21 bytecode
+```
+
+`hyper-economy-bridge` 15 tests · `spigot-metric-exporter` 8 · `chronos-daily-rewards` 7
+· `mc-backup-daemon` 15 plus a restore proven byte-exact by `diff -r`.
 
 ---
 
