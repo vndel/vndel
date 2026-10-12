@@ -98,21 +98,22 @@ nothing that must survive a restart goes over it.
 ## Minecraft Infrastructure Library
 
 A growing collection of focused templates, runbooks, and tools for operating
-Paper and Velocity networks. The operational guides are reference material;
-validate configurations in staging and adapt them to your environment.
+Paper and Velocity networks. Guides are reference material; validate
+configurations in staging and adapt them to your environment.
 
 ### Plugins, builds, and compatibility
 
 | Repository | Focus |
 |---|---|
 | [mc-network-watchdog](https://github.com/vndel/mc-network-watchdog) | Paper MSPT-aware health signals and operator alerts. |
-| [mc-plugin-release-pipeline](https://github.com/vndel/mc-plugin-release-pipeline) | Release checks, artifact checksums, and safer publishing workflow guidance. |
-| [paper-plugin-template](https://github.com/vndel/paper-plugin-template) | Java 21 Paper plugin starter with lifecycle and configuration examples. |
-| [velocity-plugin-template](https://github.com/vndel/velocity-plugin-template) | Velocity plugin starter emphasizing non-blocking work and lifecycle cleanup. |
-| [mc-plugin-compat-matrix](https://github.com/vndel/mc-plugin-compat-matrix) | Track tested Java, Paper, Velocity, and plugin combinations. |
-| [mc-plugin-api-contract-tests](https://github.com/vndel/mc-plugin-api-contract-tests) | Contract test ideas for provider lifecycle and plugin integrations. |
+| [mc-plugin-release-pipeline](https://github.com/vndel/mc-plugin-release-pipeline) | Release checks, checksums, and publishing workflow guidance. |
+| [paper-plugin-template](https://github.com/vndel/paper-plugin-template) | Java 21 Paper plugin starter. |
+| [velocity-plugin-template](https://github.com/vndel/velocity-plugin-template) | Velocity starter emphasizing non-blocking work. |
+| [mc-plugin-compat-matrix](https://github.com/vndel/mc-plugin-compat-matrix) | Track tested runtime and plugin combinations. |
+| [mc-plugin-api-contract-tests](https://github.com/vndel/mc-plugin-api-contract-tests) | Contract test cases for provider lifecycle and integrations. |
 | [mc-server-version-matrix](https://github.com/vndel/mc-server-version-matrix) | Record verified runtime combinations and test results. |
-| [mc-plugin-config-migrations](https://github.com/vndel/mc-plugin-config-migrations) | Safe, versioned configuration migration patterns and fixtures. |
+| [mc-plugin-config-migrations](https://github.com/vndel/mc-plugin-config-migrations) | Safe, versioned configuration migration patterns. |
+| [mc-plugin-dependency-audit](https://github.com/vndel/mc-plugin-dependency-audit) | Release-time dependency, license, and vulnerability review. |
 
 ### Operations and reliability
 
@@ -121,34 +122,38 @@ validate configurations in staging and adapt them to your environment.
 | [minecraft-server-container](https://github.com/vndel/minecraft-server-container) | Container baseline for a persistent Paper server. |
 | [mc-network-status-page](https://github.com/vndel/mc-network-status-page) | Component health and incident communication conventions. |
 | [minecraft-allowlist-service](https://github.com/vndel/minecraft-allowlist-service) | UUID-first allowlist service contract and schema. |
-| [mc-queue-coordinator](https://github.com/vndel/mc-queue-coordinator) | Bounded admission-control and queue invariants for proxy networks. |
+| [mc-queue-coordinator](https://github.com/vndel/mc-queue-coordinator) | Bounded admission-control for proxy networks. |
 | [paper-world-pregen-planner](https://github.com/vndel/paper-world-pregen-planner) | Staged, bounded world pre-generation planning. |
 | [mc-log-anomaly-triage](https://github.com/vndel/mc-log-anomaly-triage) | Privacy-aware log signals and triage guidance. |
-| [mc-maintenance-window](https://github.com/vndel/mc-maintenance-window) | Maintenance checklists and change-record templates. |
+| [mc-maintenance-window](https://github.com/vndel/mc-maintenance-window) | Maintenance checklists and change records. |
 | [mc-incident-drills](https://github.com/vndel/mc-incident-drills) | Staging recovery scenarios and exercise reports. |
 | [mc-network-slo-kit](https://github.com/vndel/mc-network-slo-kit) | Service-level objectives and measurement notes. |
-| [mc-ops-runbook-index](https://github.com/vndel/mc-ops-runbook-index) | Service ownership and operational runbook catalog. |
-| [mc-network-failover-lab](https://github.com/vndel/mc-network-failover-lab) | Controlled staging exercises for proxy/backend failover. |
+| [mc-ops-runbook-index](https://github.com/vndel/mc-ops-runbook-index) | Service ownership and runbook catalog. |
+| [mc-network-failover-lab](https://github.com/vndel/mc-network-failover-lab) | Controlled staging failover exercises. |
+| [mc-server-capacity-planner](https://github.com/vndel/mc-server-capacity-planner) | Capacity estimates grounded in measured workloads. |
+| [mc-world-storage-audit](https://github.com/vndel/mc-world-storage-audit) | World storage growth and disk headroom audits. |
 
 ### Security and data stewardship
 
 | Repository | Focus |
 |---|---|
-| [mc-server-firewall-baseline](https://github.com/vndel/mc-network-firewall-baseline) | Separate public proxy ingress from private backend and management traffic. |
-| [mc-server-secret-rotation](https://github.com/vndel/mc-server-secret-rotation) | Credential inventory and rotation procedures; no live secrets. |
+| [mc-network-firewall-baseline](https://github.com/vndel/mc-network-firewall-baseline) | Separate public proxy ingress from private backend traffic. |
+| [mc-server-secret-rotation](https://github.com/vndel/mc-server-secret-rotation) | Credential rotation procedures; no live secrets. |
 | [mc-rcon-operator-cli](https://github.com/vndel/mc-rcon-operator-cli) | Minimal environment-configured RCON operator client. |
+| [mc-plugin-permission-audit](https://github.com/vndel/mc-plugin-permission-audit) | Least-privilege permission review worksheet. |
 | [mc-player-session-audit](https://github.com/vndel/mc-player-session-audit) | Session event schema and retention configuration. |
-| [mc-player-data-retention](https://github.com/vndel/mc-player-data-retention) | Privacy-conscious data inventory and deletion policy templates. |
+| [mc-player-data-retention](https://github.com/vndel/mc-player-data-retention) | Data inventory and deletion policy templates. |
+| [mc-server-logging-baseline](https://github.com/vndel/mc-server-logging-baseline) | Structured logging and redaction conventions. |
 
 ### Data, capacity, and testing
 
 | Repository | Focus |
 |---|---|
-| [mc-server-cost-model](https://github.com/vndel/mc-server-cost-model) | Capacity and infrastructure cost estimation guidance. |
+| [mc-server-cost-model](https://github.com/vndel/mc-server-cost-model) | Infrastructure cost estimation guidance. |
 | [mc-database-migration-kit](https://github.com/vndel/mc-database-migration-kit) | Additive database migration and rollback patterns. |
-| [mc-server-config-validator](https://github.com/vndel/mc-server-config-validator) | Validate YAML configuration and flag placeholder secrets. |
+| [mc-server-config-validator](https://github.com/vndel/mc-server-config-validator) | YAML validation and placeholder-secret checks. |
 | [mc-redis-topology](https://github.com/vndel/mc-redis-topology) | Redis topology and access-boundary guidance. |
-| [mc-backup-restore-drills](https://github.com/vndel/mc-backup-restore-drills) | Restore validation procedures for Minecraft world backups. |
+| [mc-backup-restore-drills](https://github.com/vndel/mc-backup-restore-drills) | Restore validation for Minecraft world backups. |
 | [mc-traffic-replay-lab](https://github.com/vndel/mc-traffic-replay-lab) | Capped, staging-only synthetic connection test plans. |
 
 #### Verifying any of it
